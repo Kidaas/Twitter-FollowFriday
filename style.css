@@ -1,12 +1,21 @@
+@import url('http://fonts.googleapis.com/css?family=Droid+Sans');
 /* ===========================
  * Définition des styles de base
  * ========================== */
+
+ html, body {
+ 	font-family: "Droid sans", Helvetica;
+ 	width: 100%;
+ 	height: 100%;
+ 	overflow: hidden;
+ }
+
 body {
 	margin: 0;
 	background-color: #203748;
 }
 
-header, footer {
+footer {
 	position: fixed;
 	width: 100%;
 	height: 60px;
@@ -19,28 +28,24 @@ a {
 }
 
 /* ===========================
- * Header
- * ========================== */
-header {
-	top: 0px;
-	left: 0px;
-	right: 0px;
-	text-align: center;
-}
-
-header img {
-	margin-top: 5px;
-	border-radius: 50%;
-}
-
-/* ===========================
  * Social
  * ========================== */
-
 #reseaux {
-	position:fixed;	
-	left: 0px;	
-	width: 100px;
+	height: 50px;
+	width: 100%;
+	margin:0px auto;
+
+	background-color: tomato;
+}
+
+ul{ list-style: none; display: inline-block;}
+li{ display: inline-block;}
+
+#reseaux a{
+	display: block;
+	width: 200px;
+	border-right: 1px solid white;
+	text-align: center;
 }
 
 /* ===========================
@@ -50,45 +55,54 @@ section {
 	width: 80%;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 100px;
+	margin-top: 20px;
 }
 
 /* On aligne les avatars */
 div.friends {
 	float: left;
-	margin: 10px 10px 10px 10px;
 }
 
 /* Popup  */
-a.popup:hover {
-	 background: none; 
-	 z-index: 50; 
-}
-   
-a.popup span { 
-	display: none;
-}
-   
-a.popup:hover span {
-	display: block; 
-	position: absolute;
-	width: 150px;
-	padding: 5px;
-	
-	border: 1px solid #f04949;
-	border-left: 10px solid #f04949;
-	
-	color: #203748;
-	font-family:arial, verdana, sans-serif; 
-	text-align:justify; 
-	font-size:12px;
-	font-weight:normal;
-	background: white;
+a.popup
+{
+	margin: 5px 5px 0px 0px;
+    position:relative;
+    z-index:24; 
 }
 
-span.erreur {
-	color: #74db8a;
+img{
+	margin: 10px;
 }
+a.popup:hover {
+	z-index:25; 
+}
+
+a.popup span{display: none}
+
+a.popup:hover span
+{
+    display: block;
+    position: absolute;
+    top: 0.1em; 
+    left: 0.1em; 
+    width: 250px;
+    padding: 5px 10px 0px 10px;
+ 	border-left: 5px solid tomato;
+    background-color: white; 
+    color: black;
+}
+
+p.pseudo{
+	font-style: italic;
+}
+
+p.description{
+	font-size: 15px;
+	text-align: justify;
+	text-justify: inter-word;
+}
+
 /* ===========================
  *	Footer
  * ========================== */
