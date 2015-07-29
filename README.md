@@ -7,7 +7,9 @@ Cette application permet de retourner les X dernières personne que vous suivez 
 Elle a été créé pour faciliter l'affichage des Abonnements pour le Follow Friday.
 
 Le fichier config/config.php contient les paramètres lambda à renseigner :
-- $max corresponds aux nombres de liste de personne à retourner (une liste contient 20 personnes)
+- $count : nombres de personnes à retourner
+- $pseudo : pseudo (@xxxx) de la personne dont souhaite retourner les abonnements
+- $cache : le chemin et nom du fichier servant de cache
 - Informations de votre compte twitter dev : https://apps.twitter.com/
     - $consumer_key=''; //Application consumer key
     - $consumer_secret=''; //Application consumer secret key
